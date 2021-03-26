@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_main"
+    app:startDestination="@id/nav_compass">
+
+    <fragment
+        android:id="@+id/nav_compass"
+        android:name="com.pyatek.compass.ui.compass.CompassFragment"
+        android:label="CompassFragment"
+        tools:layout="@layout/fragment_compass">
+
+        <action
+            android:id="@+id/action_nav_compass_to_nav_map"
+            app:destination="@id/nav_map" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_map"
+        android:name="com.pyatek.compass.ui.map.MapFragment"
+        android:label="MapFragment"
+        tools:layout="@layout/fragment_map">
+        <argument
+            android:name="coordinatesId"
+            app:argType="integer" />
+    </fragment>
+</navigation>

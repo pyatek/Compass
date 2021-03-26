@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Compass</string>
+    <string name="cardinal_north">N</string>
+    <string name="cardinal_east">E</string>
+    <string name="cardinal_south">S</string>
+    <string name="cardinal_west">W</string>
+    <string name="hint_latitude">Latitude</string>
+    <string name="hint_longitude">Longitude</string>
+    <string name="accept">Zaakceptuj</string>
+    <string name="click_to_setup_destination">Kliknij, aby wyznaczyć cel</string>
+    <string name="or_select_from_list">… lub wybierz z listy</string>
+    <string name="current_bearing">%d°</string>
+    <string name="current_destination_details">Obecny cel:</string>
+    <string name="destination_meters">%1$.2f km</string>
+    <string name="set_coordinates">Podaj współrzędne</string>
+    <string name="start">Start</string>
+    <string name="end">End</string>
+    <string name="coordinates_starting_point">Punkt startowy: %1$.3f°, %2$.3f°</string>
+    <string name="coordinates_ending_point">Punkt końcowy: %1$.3f°, %2$.3f°</string>
+    <string name="coordinates_distance">Odległość: %1$.2fkm</string>
+    <string name="coordinates_bearing">Kierunek: %d°</string>
+    <string name="compass_calibration_description">Aby zwiększyć dokładność kompasu, obróć swoim telefonem 3 razy tak jak na załączonym obrazku:</string>
+    <string name="calibration_end">Zakończ</string>
+    <string name="accuracy_status">Dokładność: </string>
+    <string name="accuracy_high">wysoka</string>
+    <string name="accuracy_medium">średnia</string>
+    <string name="accuracy_low">niska</string>
+    <string name="compass_acuracy_title">Dokładność kompasu</string>
+</resources>

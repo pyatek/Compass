@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardUseCompatPadding="true"
+    android:layout_margin="25dp"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    android:elevation="5dp"
+    app:cardCornerRadius="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/dialogCoordinatesTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:text="@string/set_coordinates"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/dialogCoordinatesLatitudeEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_latitude"
+            android:layout_marginTop="10dp"
+            android:inputType="numberDecimal|numberSigned"
+            app:layout_constraintTop_toBottomOf="@+id/dialogCoordinatesTitleTextView"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/dialogCoordinatesLongitudeEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_longitude"
+            android:inputType="numberDecimal|numberSigned"
+            app:layout_constraintTop_toBottomOf="@+id/dialogCoordinatesLatitudeEditText"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/dialogCoordinatesAcceptButton"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="@string/accept"
+            android:textAllCaps="false"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/dialogCoordinatesLongitudeEditText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
