@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="jm"
+            type="com.pyatek.compass.data.local.entity.HistoryCoordinatesEntity" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/coordinatesDateTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="22.03.2021 13:30"
+            android:textSize="16sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/coordinatesStartingPointTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@{String.format(@string/coordinates_starting_point, jm.startLat, jm.startLon)}"
+            app:layout_constraintTop_toBottomOf="@+id/coordinatesDateTextView"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/coordinatesEndPointTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{String.format(@string/coordinates_ending_point, jm.endLat, jm.endLon)}"
+            tools:text="@string/coordinates_ending_point"
+            app:layout_constraintTop_toBottomOf="@+id/coordinatesStartingPointTextView"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/coordinatesDistanceTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{String.format(@string/coordinates_distance, jm.distance)}"
+            tools:text="@string/coordinates_distance"
+            app:layout_constraintTop_toBottomOf="@+id/coordinatesEndPointTextView"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/coordinatesBearingTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{String.format(@string/coordinates_bearing, jm.bearing)}"
+            tools:text="@string/coordinates_bearing"
+            app:layout_constraintTop_toBottomOf="@+id/coordinatesDistanceTextView"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/coordinatesSelectImageButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_baseline_accept"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/coordinatesShowMapImageButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_baseline_location_on_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/coordinatesSelectImageButton"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/mint"
+            android:layout_marginTop="15dp"
+            app:layout_constraintTop_toBottomOf="@+id/coordinatesBearingTextView"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
